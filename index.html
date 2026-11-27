@@ -1,0 +1,79 @@
+<!doctype html>
+<html lang="sv">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="description" content="Forma är en portfolio för projekt, processer och idéer i arbete.">
+<title>Forma · Portfolio</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="./style.css">
+<script defer src="./app.js"></script>
+</head>
+<body>
+<a class="skip" href="#projekt">Hoppa till projekt</a>
+<header class="header"><div class="wrap bar">
+<a class="brand" href="#" aria-label="Forma, startsida"><span class="symbol" aria-hidden="true">✳</span><span>FORMA<span class="period">.</span></span></a>
+<nav aria-label="Huvudmeny"><a href="#projekt">Projekt</a><a href="#om">Om</a></nav>
+<button class="button outline add" type="button" hidden><span aria-hidden="true">+</span> Lägg till projekt</button>
+</div></header>
+<main>
+<section class="wrap draft" id="draft" aria-labelledby="draft-title" hidden>
+  <div><h2 id="draft-title">Redigera portfolion</h2>
+    <p id="draft-status" role="status">Spara dina ändringar här och ladda sedan upp den nya filen <code>portfolio.json</code> till GitHub.</p></div>
+  <div class="draft-actions">
+    <button type="button" class="button primary" id="download-draft">Ladda ned portfolio.json</button>
+    <a class="button outline" id="open-github-upload" target="_blank" rel="noopener" hidden>Öppna uppladdning på GitHub</a>
+  </div>
+</section>
+<section class="wrap hero" aria-labelledby="hero-title">
+<div class="hero-copy"><p class="eyebrow"><span class="dash"></span> Oberoende portfolio</p>
+<h1 id="hero-title">Idéer som<br><em>tar form.</em></h1>
+<p class="intro" id="intro">Ett urval av projekt inom design, teknik och skapande. Se vad som tog form och hur det gick till.</p>
+<a class="button primary" href="#projekt">Utforska projekten</a>
+</div>
+<div class="map-frame">
+<div class="map-visual"><canvas id="orbit" aria-hidden="true"></canvas><div class="map-pins" id="map-pins"></div></div>
+<div class="map-footer"><span><span class="map-dot"></span> Projektkarta</span><span id="map-hint">Välj en punkt för att öppna ett projekt</span></div>
+</div>
+</section>
+<section class="wrap projects" id="projekt" aria-labelledby="project-title">
+<div class="section-top"><div><p class="eyebrow"><span class="dash"></span> Projektarkiv</p><h2 id="project-title">Utvalda projekt</h2></div>
+<span id="project-count" class="count" aria-live="polite"></span></div>
+<div class="filters" id="filters" aria-label="Filtrera projekt"></div>
+<p id="status" class="status" role="status" hidden></p>
+<div id="project-grid" class="grid"></div>
+</section>
+<section class="wrap about" id="om" aria-labelledby="about-title">
+<div><p class="eyebrow"><span class="dash"></span> Bakom projekten</p><h2 id="about-title">Om portfolion</h2></div>
+<div><p id="bio">Här får både färdiga projekt och experiment en plats. Öppna ett projekt för att läsa om idén, arbetet och min roll.</p><a id="contact" class="button primary" hidden>Kontakta mig</a><button class="button outline" id="edit-profile" type="button" hidden>Redigera presentation</button></div>
+</section>
+</main>
+<footer class="wrap footer"><a class="brand" href="#"><span class="symbol" aria-hidden="true">✳</span><span>FORMA<span class="period">.</span></span></a><span>Portfolio</span></footer>
+
+<dialog id="detail"><div class="dialog-inner"><button class="close" type="button" aria-label="Stäng">×</button><div id="detail-content"></div></div></dialog>
+<dialog id="editor"><div class="dialog-inner"><button class="close" type="button" aria-label="Stäng">×</button>
+<p class="eyebrow"><span class="dash"></span> Projektarkiv</p><h2 id="editor-title">Lägg till projekt</h2>
+<form id="project-form">
+<label>Titel<input name="title" maxlength="80" required></label>
+<div class="form-row"><label>Kategori<input name="category" maxlength="38" list="categories" placeholder="Till exempel Design" required><datalist id="categories"></datalist></label>
+<label>År<input name="year" type="number" min="1900" max="2100" required></label></div>
+<label>Din roll<input name="role" maxlength="80" placeholder="Till exempel formgivare"></label>
+<label>Kort beskrivning<textarea name="summary" maxlength="200" rows="2" required></textarea></label>
+<label>Om projektet<textarea name="story" maxlength="5000" rows="4" placeholder="Vad var idén och hur gick du tillväga?"></textarea></label>
+<label>Bild<input name="image" type="file" accept="image/jpeg,image/png,image/webp,image/avif"><small id="image-note">JPG, PNG, WebP eller AVIF. Valfritt.</small></label>
+<label>Projektlänk<input name="url" type="url" maxlength="600" placeholder="https://"></label>
+<p class="form-error" role="alert" hidden></p>
+<div class="form-actions"><button class="button primary" type="submit">Spara projekt</button><button class="button outline" id="remove-project" type="button" hidden>Ta bort</button></div>
+</form></div></dialog>
+<dialog id="profile"><div class="dialog-inner"><button class="close" type="button" aria-label="Stäng">×</button><h2>Redigera presentation</h2>
+<form id="profile-form">
+<label>Ditt namn<input name="name" maxlength="80"></label>
+<label>Introduktion<textarea name="intro" maxlength="260" rows="3" required></textarea></label>
+<label>Om dig<textarea name="bio" maxlength="1300" rows="5" required></textarea></label>
+<label>E-post<input name="email" type="email" maxlength="200"></label>
+<p class="form-error" role="alert" hidden></p>
+<div class="form-actions"><button class="button primary" type="submit">Spara presentation</button></div>
+</form></div></dialog>
+</body></html>

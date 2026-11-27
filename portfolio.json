@@ -1,0 +1,43 @@
+{
+  "profile": {
+    "name": "",
+    "intro": "Ett urval av projekt inom design, teknik och skapande. Se vad som tog form och hur det gick till.",
+    "bio": "Här får både färdiga projekt och experiment en plats. Öppna ett projekt för att läsa om idén, arbetet och min roll.",
+    "email": ""
+  },
+  "projects": [
+    {
+      "id": "atlas",
+      "title": "Atlas",
+      "category": "Digitalt",
+      "year": 2025,
+      "summary": "Ett kartkoncept för nyfikna vandrare.",
+      "story": "Tanken bakom Atlas är att göra det lättare att välja en vandring efter vad man vill uppleva längs vägen. Konceptet ger stigar, utsiktspunkter och terräng olika tyngd beroende på hur långt in i kartan man zoomar.",
+      "role": "Interaktionsdesign",
+      "image": "./assets/atlas.jpg",
+      "demo": true
+    },
+    {
+      "id": "mellanrum",
+      "title": "Mellanrum",
+      "category": "Formgivning",
+      "year": 2025,
+      "summary": "En visuell identitet byggd kring ljus och tomrum.",
+      "story": "Mellanrum utgår från de skiftande former som uppstår där ljus möter arkitektur. Formen återkommer i affischer och trycksaker, där luft kring texten får styra vad man läser först.",
+      "role": "Visuell identitet",
+      "image": "./assets/mellanrum.jpg",
+      "demo": true
+    },
+    {
+      "id": "signal",
+      "title": "Signal",
+      "category": "Experiment",
+      "year": 2024,
+      "summary": "En studie i hur ljud kan bli bild.",
+      "story": "Signal undersöker vad som händer när ljudets rytm får styra rörelse och kontrast. Korta inspelningar blir till visuella sekvenser, där varje variant tolkar en annan egenskap hos ljudet.",
+      "role": "Koncept och prototyp",
+      "image": "./assets/signal.jpg",
+      "demo": true
+    }
+  ]
+}
