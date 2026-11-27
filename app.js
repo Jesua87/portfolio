@@ -199,7 +199,7 @@ function render() {
   $('#bio').textContent = profile.bio;
   $('#contact').hidden = !profile.email;
   if (profile.email) $('#contact').href = 'mailto:' + profile.email;
-  document.title = profile.name ? profile.name + ' · Portfolio' : 'Forma · Portfolio';
+  document.title = profile.name ? profile.name + ' · Portfolio' : 'David Isberg · Portfolio';
   renderProjects();
 }
 function showError(form, message = '') {
