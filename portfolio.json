@@ -7,6 +7,18 @@
   },
   "projects": [
     {
+      "title": "Testar",
+      "category": "Digitalt",
+      "year": 2026,
+      "role": "",
+      "summary": "Testar",
+      "story": "",
+      "url": "",
+      "id": "96e75caa-adb1-45be-b660-8efa6fdce5e7",
+      "image": "",
+      "demo": false
+    },
+    {
       "id": "atlas",
       "title": "Atlas",
       "category": "Digitalt",
