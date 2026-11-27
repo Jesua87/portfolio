@@ -23,31 +23,13 @@ dialog{border:1px solid #504840;border-radius:12px;padding:0;width:min(620px,cal
   display: inline-flex;
   flex: none;
   align-items: center;
-  justify-content: center;
-  gap: 4px;
-  width: 32px;
-  height: 32px;
   color: var(--accent);
-}
-
-.terminal-prompt,
-.terminal-cursor {
-  background: currentColor;
-}
-
-.terminal-prompt {
-  width: 13px;
-  height: 18px;
-  clip-path: polygon(0 0, 100% 42%, 100% 58%, 0 100%, 0 77%, 65% 50%, 0 23%);
+  font: 700 1.625rem/1 ui-monospace, "SFMono-Regular", Consolas, monospace;
+  letter-spacing: 0;
 }
 
 .terminal-cursor {
-  width: 5px;
-  height: 18px;
-}
-
-@media (max-width: 440px) {
-  .brand-mark { width: 28px; height: 28px; }
+  display: inline-block;
 }
 
 @media (prefers-reduced-motion: no-preference) {
